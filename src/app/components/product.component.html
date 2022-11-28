@@ -1,0 +1,21 @@
+<div class="card h-100">
+  <a href="#">
+    <img class="card-img" src={{product.image}} alt={{product.name}} />
+  </a>
+  <div class="card-body">
+    <h4 class="card-tittle">
+      <a href="#"></a>
+    </h4>
+    <h5>{{product.price |  currency }}</h5>
+    <p class="card-text">{{product.description | slice: 0: 30}}</p>
+  </div>
+  <div class="card-footer">
+    <button (click)="addCart()" >Agregar al carrito</button>
+  </div>
+
+  <input type="number" [(ngModel)]="base">
+  <input type="number" [(ngModel)]="exp">
+<h2>{{ base | exponential:exp}}</h2>
+</div>
+
+
